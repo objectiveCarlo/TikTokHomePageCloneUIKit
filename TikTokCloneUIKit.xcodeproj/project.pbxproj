@@ -18,6 +18,12 @@
 		E78E55DE262945BF00246632 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E55DD262945BF00246632 /* Video.swift */; };
 		E78E55DF262945BF00246632 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E55DD262945BF00246632 /* Video.swift */; };
 		E78E55E0262945BF00246632 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E55DD262945BF00246632 /* Video.swift */; };
+		E78E55E72629495D00246632 /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E78E55D62629438F00246632 /* 1.mp4 */; };
+		E78E55EB2629496000246632 /* 3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E78E55D42629438F00246632 /* 3.mp4 */; };
+		E78E55EC2629496000246632 /* 5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E78E55D32629438F00246632 /* 5.mp4 */; };
+		E78E55ED2629496000246632 /* 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E78E55D82629439000246632 /* 2.mp4 */; };
+		E78E55EE2629496000246632 /* 4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E78E55D52629438F00246632 /* 4.mp4 */; };
+		E78E55EF2629496000246632 /* 6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E78E55D72629439000246632 /* 6.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,8 +270,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78E55EF2629496000246632 /* 6.mp4 in Resources */,
+				E78E55EE2629496000246632 /* 4.mp4 in Resources */,
 				E78E55AC2629411300246632 /* LaunchScreen.storyboard in Resources */,
+				E78E55E72629495D00246632 /* 1.mp4 in Resources */,
 				E78E55A92629411300246632 /* Assets.xcassets in Resources */,
+				E78E55ED2629496000246632 /* 2.mp4 in Resources */,
+				E78E55EC2629496000246632 /* 5.mp4 in Resources */,
+				E78E55EB2629496000246632 /* 3.mp4 in Resources */,
 				E78E55A72629411200246632 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
