@@ -40,6 +40,15 @@ class HomeViewController: UIViewController {
         scrollView.isPagingEnabled = true
         scrollView.delegate = self
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        VideoSource.sharedInstance.resume()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        VideoSource.sharedInstance.pause()
+    }
     
     func makePlayerViewController(player: AVPlayer, yPos: CGFloat) -> AVPlayerViewController{
         
