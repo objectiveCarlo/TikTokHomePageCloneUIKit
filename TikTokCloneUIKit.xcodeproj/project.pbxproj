@@ -15,6 +15,9 @@
 		E78E55AC2629411300246632 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78E55AA2629411300246632 /* LaunchScreen.storyboard */; };
 		E78E55B72629411400246632 /* TikTokCloneUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E55B62629411400246632 /* TikTokCloneUIKitTests.swift */; };
 		E78E55C22629411400246632 /* TikTokCloneUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E55C12629411400246632 /* TikTokCloneUIKitUITests.swift */; };
+		E78E55DE262945BF00246632 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E55DD262945BF00246632 /* Video.swift */; };
+		E78E55DF262945BF00246632 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E55DD262945BF00246632 /* Video.swift */; };
+		E78E55E0262945BF00246632 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E55DD262945BF00246632 /* Video.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,7 @@
 		E78E55D62629438F00246632 /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mp4; sourceTree = "<group>"; };
 		E78E55D72629439000246632 /* 6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 6.mp4; sourceTree = "<group>"; };
 		E78E55D82629439000246632 /* 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.mp4; sourceTree = "<group>"; };
+		E78E55DD262945BF00246632 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		E78E559E2629411200246632 /* TikTokCloneUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E78E55DC2629459900246632 /* VideoBusinessRules */,
 				E78E55D22629435400246632 /* RawVideos */,
 				E78E559F2629411200246632 /* AppDelegate.swift */,
 				E78E55A12629411200246632 /* SceneDelegate.swift */,
@@ -146,6 +151,14 @@
 				E78E55D72629439000246632 /* 6.mp4 */,
 			);
 			path = RawVideos;
+			sourceTree = "<group>";
+		};
+		E78E55DC2629459900246632 /* VideoBusinessRules */ = {
+			isa = PBXGroup;
+			children = (
+				E78E55DD262945BF00246632 /* Video.swift */,
+			);
+			path = VideoBusinessRules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E78E55A42629411200246632 /* HomeViewController.swift in Sources */,
+				E78E55DE262945BF00246632 /* Video.swift in Sources */,
 				E78E55A02629411200246632 /* AppDelegate.swift in Sources */,
 				E78E55A22629411200246632 /* SceneDelegate.swift in Sources */,
 			);
@@ -289,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E78E55B72629411400246632 /* TikTokCloneUIKitTests.swift in Sources */,
+				E78E55DF262945BF00246632 /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E78E55C22629411400246632 /* TikTokCloneUIKitUITests.swift in Sources */,
+				E78E55E0262945BF00246632 /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
