@@ -10,7 +10,8 @@ struct Video : Identifiable {
     var player : AVPlayer
 }
 
-struct VideoSource {
+class VideoSource {
+    static let sharedInstance = VideoSource()
     var videos = [
         Video(id: 0, player: AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "1", ofType: "mp4")!))),
         Video(id: 1, player: AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "2", ofType: "mp4")!))),
