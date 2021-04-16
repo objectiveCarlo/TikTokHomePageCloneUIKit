@@ -10,8 +10,8 @@ struct Video : Identifiable {
     var player : AVQueuePlayer
 }
 
-class VideoSource {
-    static let sharedInstance = VideoSource()
+class VideoDataSource {
+    static let sharedInstance = VideoDataSource()
     var looper: AVPlayerLooper?
     var currentIndex = -1 {
         willSet {

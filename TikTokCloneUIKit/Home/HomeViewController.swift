@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
         view.addSubview(scrollView)
         
         var yPos = 0
-        VideoSource.sharedInstance.videos.forEach { (video) in
+        VideoDataSource.sharedInstance.videos.forEach { (video) in
             let playerViewController =  makePlayerViewController(player: video.player, yPos:CGFloat(yPos))
        
             scrollView.addSubview(playerViewController.view)
@@ -28,9 +28,9 @@ class HomeViewController: UIViewController {
             yPos = yPos + Int(UIScreen.main.bounds.height)
         }
         
-        VideoSource.sharedInstance.currentIndex = 0
+        VideoDataSource.sharedInstance.currentIndex = 0
         
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * CGFloat((VideoSource.sharedInstance.videos.count)))
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * CGFloat((VideoDataSource.sharedInstance.videos.count)))
         
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
@@ -42,12 +42,12 @@ class HomeViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        VideoSource.sharedInstance.resume()
+        VideoDataSource.sharedInstance.resume()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        VideoSource.sharedInstance.pause()
+        VideoDataSource.sharedInstance.pause()
     }
     
     func makePlayerViewController(player: AVPlayer, yPos: CGFloat) -> AVPlayerViewController{
@@ -67,8 +67,8 @@ extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let index = Int(scrollView.contentOffset.y / UIScreen.main.bounds.height)
         
-        if VideoSource.sharedInstance.currentIndex != index {
-            VideoSource.sharedInstance.currentIndex = index
+        if VideoDataSource.sharedInstance.currentIndex != index {
+            VideoDataSource.sharedInstance.currentIndex = index
         }
     }
 }
