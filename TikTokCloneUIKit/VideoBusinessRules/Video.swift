@@ -12,6 +12,16 @@ struct Video : Identifiable {
 
 class VideoSource {
     static let sharedInstance = VideoSource()
+    var currentIndex = 0 {
+        willSet {
+            videos[currentIndex].player.seek(to: .zero)
+            videos[currentIndex].player.pause()
+        }
+        didSet {
+            videos[currentIndex].player.play()
+            videos[currentIndex].player.actionAtItemEnd = .none
+        }
+    }
     var videos = [
         Video(id: 0, player: AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "1", ofType: "mp4")!))),
         Video(id: 1, player: AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "2", ofType: "mp4")!))),

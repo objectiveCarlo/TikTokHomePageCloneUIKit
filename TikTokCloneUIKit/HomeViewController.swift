@@ -27,7 +27,8 @@ class HomeViewController: UIViewController {
             self.addChild(playerViewController)
             yPos = yPos + Int(UIScreen.main.bounds.height)
         }
-        VideoSource.sharedInstance.videos.first?.player.play()
+        
+        VideoSource.sharedInstance.currentIndex = 0
         
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * CGFloat((VideoSource.sharedInstance.videos.count)))
         
@@ -36,6 +37,8 @@ class HomeViewController: UIViewController {
         
         // to ignore safe area...
         scrollView.contentInsetAdjustmentBehavior = .never
+        scrollView.isPagingEnabled = true
+        scrollView.delegate = self
     }
     
     func makePlayerViewController(player: AVPlayer, yPos: CGFloat) -> AVPlayerViewController{
@@ -48,7 +51,16 @@ class HomeViewController: UIViewController {
         playerViewController.view.frame = CGRect(x: 0, y: yPos, width:UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         return playerViewController
     }
+}
 
-
+extension HomeViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = Int(scrollView.contentOffset.y / UIScreen.main.bounds.height)
+        
+        if VideoSource.sharedInstance.currentIndex != index {
+            VideoSource.sharedInstance.currentIndex = index
+        }
+    }
 }
 
