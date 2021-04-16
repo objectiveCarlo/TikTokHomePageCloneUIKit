@@ -11,6 +11,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.red
         self.viewControllers = [homeViewTab, searchTab, uploadTab, messageTab, profileTab]
     }
     
@@ -20,9 +21,9 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let title = "Home"
         
-        let defaultImage  = UIImage(systemName: "house")!
+        let defaultImage  = UIImage(systemName: "house")!.withTintColor(UIColor.white, renderingMode: .alwaysOriginal)
         
-        let selectedImage = UIImage(systemName: "house.fill")!
+        let selectedImage = UIImage(systemName: "house.fill")!.withTintColor(UIColor.white, renderingMode: .alwaysOriginal)
         
         let tabBarItems = (title: title, image: defaultImage, selectedImage: selectedImage)
         
@@ -37,9 +38,9 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let finalTabBar = UIViewController()
         
-        let defaultImage = UIImage(systemName: "magnifyingglass.circle")!
+        let defaultImage = UIImage(systemName: "magnifyingglass.circle")!.withTintColor(UIColor.white, renderingMode: .alwaysOriginal)
         
-        let selectedImage = UIImage(systemName: "magnifyingglass.circle.fill")!
+        let selectedImage = UIImage(systemName: "magnifyingglass.circle.fill")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
         
         let tabBarItem = UITabBarItem(title: "Search", image: defaultImage, selectedImage: selectedImage)
         
@@ -52,11 +53,11 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let finalTabBar = UIViewController()
         
-        let defaultImage = UIImage(systemName: "icloud.and.arrow.up")!
+        let defaultImage = UIImage(systemName: "icloud.and.arrow.up")!.withTintColor(UIColor.white, renderingMode: .alwaysOriginal)
         
-        let selectedImage = UIImage(systemName: "icloud.and.arrow.up.fill")!
+        let selectedImage = UIImage(systemName: "icloud.and.arrow.up.fill")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
         
-        let tabBarItem = UITabBarItem(title: "Upload", image: defaultImage, selectedImage: selectedImage)
+        let tabBarItem = UITabBarItem(title: "", image: defaultImage, selectedImage: selectedImage)
         
         finalTabBar.tabBarItem = tabBarItem
         
@@ -67,11 +68,11 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let finalTabBar = UIViewController()
         
-        let defaultImage = UIImage(systemName: "message")!
+        let defaultImage = UIImage(systemName: "message")!.withTintColor(UIColor.white, renderingMode: .alwaysOriginal)
         
-        let selectedImage = UIImage(systemName: "message.fill")!
+        let selectedImage = UIImage(systemName: "message.fill")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
         
-        let tabBarItem = UITabBarItem(title: "Message", image: defaultImage, selectedImage: selectedImage)
+        let tabBarItem = UITabBarItem(title: "Inbox", image: defaultImage, selectedImage: selectedImage)
         
         finalTabBar.tabBarItem = tabBarItem
         
@@ -82,11 +83,11 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let finalTabBar = UIViewController()
         
-        let defaultImage = UIImage(systemName: "person.crop.circle")!
+        let defaultImage = UIImage(systemName: "person.crop.circle")!.withTintColor(UIColor.white, renderingMode: .alwaysOriginal)
         
-        let selectedImage = UIImage(systemName: "person.crop.circle.fill")!
+        let selectedImage = UIImage(systemName: "person.crop.circle.fill")!.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
         
-        let tabBarItem = UITabBarItem(title: "Search", image: defaultImage, selectedImage: selectedImage)
+        let tabBarItem = UITabBarItem(title: "Me", image: defaultImage, selectedImage: selectedImage)
         
         finalTabBar.tabBarItem = tabBarItem
         

@@ -15,9 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let tabBar = UITabBar.appearance()
-        tabBar.barTintColor = UIColor.clear
+        tabBar.barTintColor = UIColor.white
         tabBar.backgroundImage = UIImage()
-        tabBar.shadowImage = UIImage()
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for:.normal)
+        
         return true
     }
 
