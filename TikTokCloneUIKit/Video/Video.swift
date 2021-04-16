@@ -13,11 +13,8 @@ struct Video : Identifiable {
 class VideoDataSource {
     static let sharedInstance = VideoDataSource()
     var looper: AVPlayerLooper?
-    var currentIndex = -1 {
+    var currentIndex = 0 {
         willSet {
-            guard currentIndex >= 0 else {
-                return
-            }
             videos[currentIndex].player.seek(to: .zero)
             videos[currentIndex].player.pause()
             if let looper = looper {
@@ -25,22 +22,16 @@ class VideoDataSource {
             }
         }
         didSet {
-            guard currentIndex >= 0 else {
-                return
-            }
             looper = AVPlayerLooper(player: videos[currentIndex].player, templateItem: videos[currentIndex].player.currentItem!)
             videos[currentIndex].player.play()
         }
     }
     func pause() {
-        guard currentIndex >= 0 else {
-            return
-        }
         videos[currentIndex].player.pause()
     }
     
     func resume() {
-        guard currentIndex >= 0 else {
+        guard videos[currentIndex].player.rate == 0 else {
             return
         }
         videos[currentIndex].player.play()
