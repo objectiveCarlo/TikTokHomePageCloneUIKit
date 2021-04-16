@@ -46,8 +46,8 @@ class HomeViewController: UIViewController {
         let playerViewController = AVPlayerViewController()
         playerViewController.player = player
         playerViewController.showsPlaybackControls = false
-        playerViewController.videoGravity = .resizeAspectFill
-        playerViewController.view.backgroundColor = .white
+        playerViewController.videoGravity = .resizeAspect
+        playerViewController.view.backgroundColor = .black
         playerViewController.view.frame = CGRect(x: 0, y: yPos, width:UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         return playerViewController
     }
